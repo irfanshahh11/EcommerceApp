@@ -1,52 +1,33 @@
-
-<br>
-<br>
-<hr>
-<br>
-<center>
-
-	<div class = "container">
-	<div class = "row">
-	
-		<div class = "col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-			<div class = "container" style="background-color: white">
-				<center>
-					<h2>Online Electronic Store</h2>
-					<p>The Future is Now.</p>
-				</center>
-			</div>
+<footer style="background-color: #343a40; color: white; padding: 20px 10px; font-size: 14px;">
+	<div class="container text-center">
+	  <div class="row justify-content-center">
+		
+		<!-- Brand Section -->
+		<div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-3">
+		  <h6 style="font-size: 16px; font-weight: bold;">Online Electronic Store</h6>
+		  <p style="margin: 0;">The Future is Now.</p>
 		</div>
 		
-		<div class = "col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-			<div class = "container" style="background-color: white">
-				<center>
-					<h2>Services</h2>
-					<p>Shopping Cart</p>
-					<p>Shop</p>
-					<p>Services Login</p>
-					<p>Contact</p>
-				</center>
-			</div>
+		<!-- Services Section -->
+		<div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-3">
+		  <h6 style="font-size: 16px; font-weight: bold;">Services</h6>
+		  <ul style="list-style: none; padding: 0; margin: 0;">
+			<li><a href="#" style="color: white; text-decoration: none;">Shopping Cart</a></li>
+			<li><a href="#" style="color: white; text-decoration: none;">Shop</a></li>
+			<li><a href="#" style="color: white; text-decoration: none;">Services Login</a></li>
+			<li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
+		  </ul>
 		</div>
 		
-		<div class = "col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12">
-			<div class = "container" style="background-color: white">
-				<center>
-					<h2>Contact Info</h2>
-					<p>Phone/Fax: 0123456789</p>
-					<p>Email: eCommerce@email.com</p>
-				</center>
-			</div>
+		<!-- Contact Info Section -->
+		<div class="col-xxl-2 col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-3">
+		  <h6 style="font-size: 16px; font-weight: bold;">Contact Info</h6>
+		  <p style="margin: 0;">Phone/Fax: 0123456789</p>
+		  <p style="margin: 0;">Email: eCommerce@email.com</p>
 		</div>
-		
-		
-		
-	
+	  </div>
+	  <hr style="background-color: #555; margin: 10px 0;">
+	  <p style="margin: 0; font-size: 12px;">© 2024 E-Commerce App. All Rights Reserved.</p>
 	</div>
-	</div>
-	<br>
-	<p> 2024 E-Commerce App.</p>
-</center>
-
-
-
+  </footer>
+  
