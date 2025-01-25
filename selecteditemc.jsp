@@ -13,55 +13,54 @@
 <link rel="stylesheet" href="Css/font.css">
 
 <style>
-/* General Styling */
 body, h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 .container {
-    padding: 20px 0;
-    background-color: #ffffff;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 .product-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 15px;
+    margin-bottom: 20px;
 }
 .product-image {
     flex: 1;
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    max-width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .product-details {
-    flex: 1;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    flex: 2;
+    padding: 10px;
 }
 .product-details h2 {
-    margin-bottom: 10px;
     font-weight: bold;
+    margin-bottom: 10px;
 }
 .product-details h3 {
     color: #007bff;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .product-details ul {
     list-style: none;
     padding: 0;
+    font-size: 14px;
 }
 .product-details ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 .add-to-cart-btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: #28a745;
     color: white;
     text-decoration: none;
@@ -77,6 +76,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+    margin-top: 20px;
     font-size: 14px;
 }
 footer a {
@@ -93,7 +93,7 @@ footer a:hover {
 <%@ include file="customer_navbar.jsp" %>
 
 <!-- Page Header -->
-<div style="background-color: #ebe9eb; text-align: center; padding: 20px 0;">
+<div style="background-color: #ebe9eb; text-align: center; padding: 10px 0;">
     <h1>Product Details</h1>
 </div>
 
@@ -132,28 +132,28 @@ footer a:hover {
     <div class="product-details">
         <h3>Key Features</h3>
         <ul>
-            <li><strong>Cutting-Edge Technology:</strong> Experience the latest advancements in electronic innovation, tailored to meet your everyday needs.</li>
+            <li><strong>Cutting-Edge Technology:</strong> Experience the latest advancements in electronic innovation.</li>
             <li><strong>User-Friendly Design:</strong> A sleek, modern look combined with intuitive functionality.</li>
-            <li><strong>Reliable Performance:</strong> Built to deliver consistent and powerful results for years to come.</li>
-            <li><strong>Eco-Friendly:</strong> Designed with sustainability in mind to reduce environmental impact.</li>
+            <li><strong>Reliable Performance:</strong> Built to deliver consistent and powerful results.</li>
+            <li><strong>Eco-Friendly:</strong> Designed to reduce environmental impact.</li>
         </ul>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <!-- Description Section -->
     <div class="product-details">
         <h3>Description</h3>
         <p>
-            Take your lifestyle to the next level with this amazing product. Whether you're at work, at home, or on the go, this electronic device ensures you stay connected, productive, and entertained. With its state-of-the-art features and ergonomic design, it’s the perfect companion for anyone seeking a blend of style, performance, and reliability.
+            This product takes your lifestyle to the next level, ensuring you stay connected and productive wherever you go.
         </p>
     </div>
 </div>
 
 <!-- Footer -->
 <footer>
-    <%@ include file="footer.jsp" %>
     <p>© 2024 E-Commerce App. All Rights Reserved.</p>
+    <a href="privacy.jsp">Privacy Policy</a> | <a href="terms.jsp">Terms of Service</a>
 </footer>
 
 </body>

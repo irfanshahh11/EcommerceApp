@@ -1,4 +1,4 @@
-<%@page import="com.conn.DBConnect"%>
+<%@page import="com.conn.DBConnect"%> 
 <%@page import="com.entity.viewlist"%>
 <%@page import="com.dao.DAO2"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -19,71 +19,63 @@ body, h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
 }
 .container {
-    padding: 20px;
+    padding: 15px;
     background-color: #fff;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .product-card {
     display: flex;
+    gap: 15px;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
     margin-bottom: 20px;
+    align-items: center;
 }
 .product-card img {
     max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
 }
 .product-details {
-    flex: 1;
-    padding: 20px;
+    flex: 2;
+    padding: 10px;
 }
-.product-details h2 {
+.product-details h2, h3 {
     margin-bottom: 10px;
-    font-weight: bold;
-}
-.product-details h3 {
-    color: #007bff;
-    margin-bottom: 20px;
 }
 .product-details ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 .product-details ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
-.edit-btn {
+.action-buttons a {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
+    padding: 8px 15px;
+    margin-right: 10px;
     text-decoration: none;
+    color: white;
     border-radius: 5px;
     font-weight: bold;
-    margin-top: 10px;
+    font-size: 14px;
+}
+.edit-btn {
+    background-color: #28a745;
 }
 .edit-btn:hover {
     background-color: #218838;
-    transition: 0.3s ease-out;
 }
 .delete-btn {
-    display: inline-block;
-    padding: 10px 20px;
     background-color: #dc3545;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 10px;
 }
 .delete-btn:hover {
     background-color: #c82333;
-    transition: 0.3s ease-out;
 }
 footer {
     background-color: #343a40;
@@ -91,6 +83,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     font-size: 14px;
+    margin-top: 20px;
 }
 footer a {
     color: white;
@@ -106,24 +99,22 @@ footer a:hover {
 <%@ include file="admin_navbar.jsp" %>
 
 <!-- Page Header -->
-<div style="background-color: #ebe9eb; text-align: center; padding: 20px 0;">
+<div style="background-color: #ebe9eb; text-align: center; padding: 15px 0;">
     <h1>Admin - Product Details</h1>
 </div>
 
 <!-- Product Section -->
 <div class="container">
-    <div class="product-card">
-        <%
-            String st = request.getParameter("Pn");
-            DAO2 dao = new DAO2(DBConnect.getConn());
-            List<viewlist> list = dao.getSelecteditem(st);
+    <%
+        String st = request.getParameter("Pn");
+        DAO2 dao = new DAO2(DBConnect.getConn());
+        List<viewlist> list = dao.getSelecteditem(st);
 
-            for(viewlist l : list) {
-        %>
+        for(viewlist l : list) {
+    %>
+    <div class="product-card">
         <!-- Product Image -->
-        <div class="col-lg-6">
-            <img src="images/<%=l.getPimage() %>" alt="<%=l.getPname() %>">
-        </div>
+        <img src="images/<%=l.getPimage() %>" alt="<%=l.getPname() %>">
 
         <!-- Product Details -->
         <div class="product-details">
@@ -134,40 +125,40 @@ footer a:hover {
                 <li><strong>Category:</strong> <%= l.getCname() %></li>
                 <li><strong>Quantity Available:</strong> <%= l.getPquantity() %></li>
             </ul>
-            <a href="editproduct?id=<%=l.getPname() %>" class="edit-btn">Edit Product</a>
-            <a href="deleteproduct?id=<%=l.getPname() %>" class="delete-btn">Delete Product</a>
+            <div class="action-buttons">
+                <a href="editproduct?id=<%=l.getPname() %>" class="edit-btn">Edit Product</a>
+                <a href="deleteproduct?id=<%=l.getPname() %>" class="delete-btn">Delete Product</a>
+            </div>
         </div>
-        <% } %>
     </div>
-
-    <hr>
+    <% } %>
 
     <!-- Key Features Section -->
     <div class="product-details">
         <h3>Key Features</h3>
         <ul>
-            <li><strong>Cutting-Edge Technology:</strong> Experience the latest advancements in electronic innovation, tailored to meet your everyday needs.</li>
+            <li><strong>Cutting-Edge Technology:</strong> Experience the latest advancements in electronic innovation.</li>
             <li><strong>User-Friendly Design:</strong> A sleek, modern look combined with intuitive functionality.</li>
-            <li><strong>Reliable Performance:</strong> Built to deliver consistent and powerful results for years to come.</li>
-            <li><strong>Eco-Friendly:</strong> Designed with sustainability in mind to reduce environmental impact.</li>
+            <li><strong>Reliable Performance:</strong> Built to deliver consistent and powerful results.</li>
+            <li><strong>Eco-Friendly:</strong> Designed to reduce environmental impact.</li>
         </ul>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <!-- Description Section -->
     <div class="product-details">
         <h3>Description</h3>
         <p>
-            Take your lifestyle to the next level with this amazing product. Whether you're at work, at home, or on the go, this electronic device ensures you stay connected, productive, and entertained. With its state-of-the-art features and ergonomic design, it’s the perfect companion for anyone seeking a blend of style, performance, and reliability.
+            This product offers state-of-the-art features and ergonomic design, perfect for anyone seeking a blend of style, performance, and reliability.
         </p>
     </div>
 </div>
 
 <!-- Footer -->
 <footer>
-    <%@ include file="footer.jsp" %>
     <p>© 2024 E-Commerce App. All Rights Reserved.</p>
+    <a href="privacy.jsp">Privacy Policy</a> | <a href="terms.jsp">Terms of Service</a>
 </footer>
 
 </body>

@@ -139,7 +139,7 @@ footer a:hover {
         </ul>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <!-- Description Section -->
     <div class="product-details">
@@ -152,8 +152,8 @@ footer a:hover {
 
 <!-- Footer -->
 <footer>
-    <%@ include file="footer.jsp" %>
     <p>© 2024 E-Commerce App. All Rights Reserved.</p>
+    <a href="privacy.jsp">Privacy Policy</a> | <a href="terms.jsp">Terms of Service</a>
 </footer>
 
 </body>
