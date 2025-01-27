@@ -123,7 +123,7 @@ if (cookies[i].getName().equals("cart"))
 		<br>
 		<%} %>
 			
-		<div class = "tp"><h5><b>Total Price: ₹ <%=Total %></b> </h5></div>
+		<div class = "tp"><h5><b>Total Price: RM <%=Total %></b> </h5></div>
 		<br>	
 		<%if(Total != 0)
 			{%>
