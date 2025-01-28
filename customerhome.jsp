@@ -33,7 +33,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         }
 	 
         div.scrollmenu {
-          background-color: black;
+          /* background-color: black; */
           overflow: auto;
           white-space: nowrap;
         }
@@ -190,14 +190,14 @@ function showSlides() {
 	for(viewlist v : listv)
 		{%>
 		<b>
-		<div class = "container border" style="background-color: white">
+		<div class = "container border" style="background-color: white; border-radius: 15px;">
 		<center>
 			<table>
 				<tr><th>
 					<a href = 'selecteditemc.jsp?Pn=<%=v.getPimage()%>'> <img src =' images/<%= v.getPimage() %>' height = 150px weight = 150px></a>
 				</th></tr><br>
 				<tr style='background-color: #ebe9eb'><th style='text-align: center'>
-					<a href = 'selecteditemc.jsp?Pn=<%=v.getPimage()%>'> <%= v.getBname()%> <%= v.getPname()%></a>
+					<a style="text-decoration: none;" href = 'selecteditemc.jsp?Pn=<%=v.getPimage()%>'> <%= v.getBname()%> <%= v.getPname()%></a>
 				</th></tr>
 			</table>
 		</center>
