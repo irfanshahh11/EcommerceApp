@@ -52,6 +52,28 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	}
     
 
+	.cancelPayment {
+        margin: 0 10px;
+        border-radius: 15px;
+        padding: 5px;
+      }
+
+      .cancelPayment:hover {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .payment {
+        border-radius: 15px;
+        padding: 5px;
+      }
+
+      .payment:hover {
+        background-color: #007bff;
+        color: white;
+      }
+
+
 
 </style>
 
@@ -87,7 +109,7 @@ String Total = request.getParameter("Total");
 
 <div style="background-color: #ebe9eb">	
 	<br>
-	<h1>Payment Detils</h1>
+	<h1>Payment Details</h1>
 	<br>
 	</div>
 
@@ -184,7 +206,7 @@ String Total = request.getParameter("Total");
 
 
 <h4><b class = "g ws">Amount Paid:</b></h4>
-<h2><input type ="text"  value= "₹ <%=Total %>" class="c" disabled selected required></h2>
+<h2><input type ="text"  value= "RM <%=Total %>" class="c" disabled selected required></h2>
 
 
 
@@ -196,8 +218,8 @@ String Total = request.getParameter("Total");
 <br>
 <br>
 <br>
-<h5><b class = "ws"><button style='border: solid 1px '><a href = "customerhome.jsp" style='text-decoration: none'>Cancel Payment</a></button> &ensp;
-<input type = "submit" value= "Proceed" name = "online"> </b></h5>
+<h5><b class = "ws"><button class="cancelPayment" style='border: solid 1px '><a href = "customerhome.jsp" style='text-decoration: none; color: inherit;'>Cancel Payment</a></button> &ensp;
+<input class="payment" type ="submit" value="Proceed" name ="online"> </b></h5>
 
 
  </center> 

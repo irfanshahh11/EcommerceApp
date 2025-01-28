@@ -38,11 +38,48 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {
 	height: 100vh;
 }
 
+.container.border button {
+	margin: 0 10px;
+	margin-bottom: 5px;
+}
+
+.continue-shopping {
+	border-radius: 15px;
+	font-weight: bold;
+	padding: 8px;
+}
+
+.continue-shopping a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.continue-shopping:hover {
+	background-color: #007bff;
+	color: white;
+}
+
+.checkout-btn {
+	border-radius: 15px;
+	font-weight: bold;
+	padding: 8px;
+}
+
+.checkout-btn a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.checkout-btn:hover {
+	background-color: #007bff;
+	color: white;
+}
+
 </style>
 </head>
 <body>
 
-<!-- <%@ include file = "navbar.jsp" %> -->
+
 <center>
 <div style="background-color: #ebe9eb">
 	<br>
@@ -138,8 +175,8 @@ if (cookies[i].getName().equals("cart"))
 		<br>	
 		<%if(Total != 0)
 			{%>
-		<button><a href="customerhome.jsp">Continue shopping</a></button>
-		<button><a href="ShippingAddress.jsp?Total=<%= Total %> + &CusName=<%= CusName%> +">Proceed to checkout</a></button>
+		<button class="continue-shopping"><a href="customerhome.jsp">Continue shopping</a></button>
+		<button class="checkout-btn"><a href="ShippingAddress.jsp?Total=<%= Total %> + &CusName=<%= CusName%> +">Proceed to checkout</a></button>
 		<!-- <a href='ShippingAddress.jsp?Total=<%= Total %> + &CusName=<%= CusName%> +' ><button class = "pd"><h5 class = "ws"><b>Proceed To Checkout</b></h5></button></a> -->
 		<%}
 		else if(Total == 0)

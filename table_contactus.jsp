@@ -43,11 +43,11 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	<table border>
 	<thead>
 		<tr style='background-color:#ebe9eb'>
-			<th style='border: 1px solid ; text-align: center'>Id</th>
-			<th style='border: 1px solid ; text-align: center'>Name</th>
-			<th style='border: 1px solid ; text-align: center'>Email Id</th>
-			<th style='border: 1px solid ; text-align: center'>Contact No.</th>
-			<th style='border: 1px solid ; text-align: center'>Message</th>
+			<td style='border: 1px solid ; text-align: center; width: 150px;'>Id</th>
+			<td style='border: 1px solid ; text-align: center; width: 150px;'>Name</th>
+			<td style='border: 1px solid ; text-align: center; width: 150px;'>Email Id</th>
+			<td style='border: 1px solid ; text-align: center; width: 150px;'>Contact No.</th>
+			<td style='border: 1px solid ; text-align: center; width: 150px;'>Message</th>
 
 						<th style='border: 1px solid ; text-align: center' colspan="2" align="center">Actions</th>
 			
@@ -70,7 +70,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 					<td style='border: 1px solid ; text-align: center'><%=v.getId() %></td>
 					<td style='border: 1px solid ; text-align: center'><%=v.getName() %></td>
 					<td style='border: 1px solid ; text-align: center'><%=v.getEmail_Id() %></td>
-					<td style='border: 1px solid ; text-align: center'><%=v.getContact_No() %></td>
+					<td style='border: 1px solid ; text-align: center'>+60<%=v.getContact_No() %></td>
 	
 					
 						<td style='border: 1px solid ; text-align: center'> <%=v.getMessage()%></td>

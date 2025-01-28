@@ -24,6 +24,7 @@ body, h1, h2, h3, h4, h5, h6 {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    height: 100vh;
 }
 h1 {
     font-size: 32px;
@@ -83,7 +84,7 @@ footer a:hover {
 <div class="container">
     <h4>Choose a table to manage:</h4>
     <div class="table-links">
-        <a href="table_cart.jsp">Table Cart</a>
+        <!-- <a href="table_cart.jsp">Table Cart</a> -->
         <a href="table_orders.jsp">Table Orders</a>
         <a href="table_order_details.jsp">Table Order Details</a>
         <a href="table_contactus.jsp">Table Contact Us</a>

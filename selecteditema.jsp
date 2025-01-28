@@ -34,7 +34,7 @@ body, h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 .product-card img {
-    max-width: 100%;
+    max-width: 50%;
     max-height: 300px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -125,10 +125,10 @@ footer a:hover {
                 <li><strong>Category:</strong> <%= l.getCname() %></li>
                 <li><strong>Quantity Available:</strong> <%= l.getPquantity() %></li>
             </ul>
-            <div class="action-buttons">
+            <!-- <div class="action-buttons">
                 <a href="editproduct?id=<%=l.getPname() %>" class="edit-btn">Edit Product</a>
                 <a href="deleteproduct?id=<%=l.getPname() %>" class="delete-btn">Delete Product</a>
-            </div>
+            </div> -->
         </div>
     </div>
     <% } %>

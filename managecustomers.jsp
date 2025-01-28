@@ -117,7 +117,7 @@ footer a:hover {
                         <td><%= c.getName() %></td>
                         <td><%= c.getPassword() %></td>
                         <td><%= c.getEmail_Id() %></td>
-                        <td><%= c.getContact_No() %></td>
+                        <td>+60<%= c.getContact_No() %></td>
                         <td>
                             <a href="carta.jsp?custname=<%= c.getName() %>">View Cart</a> |
                             <a href="deletecustomer?Name=<%= c.getName() %>&Email_Id=<%= c.getEmail_Id() %>">

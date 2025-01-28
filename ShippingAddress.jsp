@@ -49,6 +49,28 @@
       .f {
         margin-right: 270px;
       }
+
+      .cod-btn {
+        margin: 0 10px;
+        border-radius: 15px;
+        padding: 5px;
+      }
+
+      .cod-btn:hover {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .online-btn {
+        border-radius: 15px;
+        padding: 5px;
+      }
+
+      .online-btn:hover {
+        background-color: #007bff;
+        color: white;
+      }
+
     </style>
   </head>
   <body>
@@ -106,7 +128,7 @@
                   <input type="text" name="Country" class="c" required>
                 </h2>
                 <h4 class="f ws">
-                  <b>Pincode: </b>
+                  <b>Postcode: </b>
                 </h4>
                 <h2>
                   <input type="number" name="Pincode" class="c" required>
@@ -114,7 +136,7 @@
                 <br>
                 <br>
                 <b class="ws">
-                  <input type="submit" value="Cash on Delivery" name="cash"> &ensp; <input type="submit" value="Online Payment" name="online">
+                  <input class="cod-btn" type="submit" value="Cash on Delivery" name="cash"> &ensp; <input class="online-btn" type="submit" value="Online Payment" name="online">
                 </b>
               </center>
               <br>

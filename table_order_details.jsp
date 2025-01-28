@@ -66,23 +66,23 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	{%>
 	
 	<tr>
-				<td style='border: 1px solid ; text-align: center'><%=v.getDate() %></td>
+				<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getDate() %></td>
 				
-				<td style='border: 1px solid ; text-align: center'><%=v.getName() %></td>
+				<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getName() %></td>
 				
-				<td style='border: 1px solid ; text-align: center'><%=v.getBname() %></td>
+				<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getBname() %></td>
 				
-				<td style='border: 1px solid ; text-align: center'><%=v.getCname() %></td>
+				<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getCname() %></td>
 				
-				<td style='border: 1px solid ; text-align: center'><%=v.getPname() %></td>
+				<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getPname() %></td>
 				
-				<td style='border: 1px solid ; text-align: center'>₹ <%=v.getPprice() %></td>
+				<td style='border: 1px solid ; text-align: center; width: 150px;'>RM <%=v.getPprice() %></td>
 				
-				<td style='border: 1px solid ; text-align: center'><%=v.getPquantity() %></td>
+				<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getPquantity() %></td>
 				
-				<td style='border: 1px solid ; text-align: center'><img src='images/<%=v.getPimage()%>' height= 100px weight = 100px></td>
+				<td style='border: 1px solid ; text-align: center; width: 150px;'><img src='images/<%=v.getPimage()%>' height= 100px weight = 100px></td>
 						
-								<td style='border: 1px solid ; text-align: center'><a href='removetable_order_details?id=<%=v.getDate()%>&ie=<%=v.getPimage()%>'><img src = "images/delete.jpg" alt="Remove" height= 25px></td>
+				<td style='border: 1px solid ; text-align: center; width: 50px;'><a href='removetable_order_details?id=<%=v.getDate()%>&ie=<%=v.getPimage()%>'><img src = "images/delete.jpg" alt="Remove" height= 25px></td>
 		
 	
 		<tr>

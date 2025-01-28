@@ -23,7 +23,20 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     
     .b{
 	margin-right: 245px;
-	
+}
+
+.login-btn {
+    border-radius: 15px;
+    width:200px;
+    font-size: 20px;
+    display: flex;
+}
+
+.login-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
 </style>
 
 </head>
@@ -103,7 +116,7 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
            <h2><input type ="password" id = "x2" name ="Password" class = "c" required></h2>
             <br>
             
-            <h3><b><input type ="submit" name="b1" value ="Login"></b></h3>
+            <h3><b><input class="login-btn" type ="submit" name="b1" value ="Login"></b></h3>
             
              </center> 
                             <br>

@@ -15,8 +15,34 @@
 <link rel="stylesheet" href="Css/font.css">
 
 <style>
-.w3-sidebar a {font-family: "Roboto", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+.w3-sidebar a {
+	font-family: "Roboto", sans-serif
+}
+
+body,h1,h2,h3,h4,h5,h6,.w3-wide {
+	font-family: "Montserrat", sans-serif;
+}
+
+.table-responsive {
+	border-radius: 15px;
+}
+
+.order-details {
+	border-radius: 10px;
+	color: white;
+	background-color: firebrick;
+}
+
+.order-details:hover {
+	background-color: #f0c322;
+}
+
+.delete-item:hover img {
+	transform: scale(1.1);
+	transition: transform 0.3 ease;
+}
+
+
 </style>
 </head>
 <body>
@@ -46,14 +72,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 			<th style='border: 1px solid ; text-align: center'>Date</th>
 			<th style='border: 1px solid ; text-align: center'>Total Price</th>
 			<th style='border: 1px solid ; text-align: center'>Status</th>
-						<th style='border: 1px solid ; text-align: center' colspan="2" align="center">Actions</th>
+			<th style='border: 1px solid ; text-align: center' colspan="2" align="center">Actions</th>
 			
 		</tr>
 	</thead>
 	
 	
 	
-	<tbody>
+	<tbody class="table-order">
 	<%
 	
 	String o = N;
@@ -64,20 +90,20 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	
 	
 				<tr>
-					<td style='border: 1px solid ; text-align: center'><%=v.getOrder_Id() %></td>
-					<td style='border: 1px solid ; text-align: center'><%=v.getCustomer_Name() %></td>
-					<td style='border: 1px solid ; text-align: center'><%=v.getCustomer_City() %></td>
-					<td style='border: 1px solid ; text-align: center'><%=v.getDate() %></td>
+					<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getOrder_Id() %></td>
+					<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getCustomer_Name() %></td>
+					<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getCustomer_City() %></td>
+					<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getDate() %></td>
 	
 					
-						<td style='border: 1px solid ; text-align: center'>₹ <%=v.getTotal_Price()%></td>
+					<td style='border: 1px solid ; text-align: center; width: 150px;'>RM <%=v.getTotal_Price()%></td>
 						
-						<td style='border: 1px solid ; text-align: center'><%=v.getStatus() %></td>
+					<td style='border: 1px solid ; text-align: center; width: 150px;'><%=v.getStatus() %></td>
 						
-					<td style='border: 1px solid ; text-align: center'><a href='orderdetails.jsp?id=<%=v.getDate()%>'><p style='color: firebrick'>Order Details<p></td>
+					<td style='border: 1px solid ; text-align: center; width: 150px;'><button class="order-details"><a style="text-decoration: none; color: inherit;" href='orderdetails.jsp?id=<%=v.getDate()%>'>Order Details</button></td>
 					
 					
-						<td style='border: 1px solid ; text-align: center'><a href='removeorders?id=<%=v.getOrder_Id()%>'><img src = "images/delete.jpg" alt="Remove" height= 25px></td>
+					<td style='border: 1px solid ; text-align: center; width: 50px;'><a href='removeorders?id=<%=v.getOrder_Id()%>'><img class="delete-item" src="images/delete.jpg" alt="Remove" height= 25px></td>
 					
 					
 				</tr>
