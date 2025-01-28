@@ -1,6 +1,6 @@
-<%@page import="com.entity.cart"%>
 <%@page import="com.conn.DBConnect"%>
 <%@page import="com.dao.DAO2"%>
+<%@page import="com.entity.cart"%>
 <%@page import="java.sql.*,java.io.*,java.text.*,java.util.*" %> 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -8,13 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href = "images/bootstrap.css">
-
-<link rel="stylesheet" href="Css/w3.css">
-<link rel="stylesheet" href="Css/font.css">
-<link rel="stylesheet" href="Css/cart.css">
-<link rel="stylesheet" href="Css/whitespace.css">
+<title>Cart</title>
 
  <script>
 
@@ -23,15 +17,32 @@
             alert("Add_something_to_cart_first.");
         }
     </script>
+<link rel="stylesheet" href = "images/bootstrap.css">
+
+<link rel="stylesheet" href="Css/w3.css">
+<link rel="stylesheet" href="Css/font.css">
+<link rel="stylesheet" href="Css/cart.css">
+<link rel="stylesheet" href="Css/whitespace.css">
 
 <style>
-.w3-sidebar a {font-family: "Roboto", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+.w3-sidebar a {
+	font-family: "Roboto", sans-serif
+}
+
+body,h1,h2,h3,h4,h5,h6,.w3-wide {
+	font-family: "Montserrat", sans-serif;
+}
+
+.table-responsive {
+	height: 100vh;
+}
+
 </style>
 </head>
 <body>
 
-<%@ include file = "customer_navbar.jsp" %>
+<!-- <%@ include file = "navbar.jsp" %> -->
 <center>
 <div style="background-color: #ebe9eb">
 	<br>
@@ -40,6 +51,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	</div>
 	<br>
 
+
+<%
+
+String N = null;
+
+String CusName = "empty";
+
+%>
 
 <%
 
@@ -60,19 +79,19 @@ if (cookies[i].getName().equals("cart"))
 <%if(msgg != null)
 		out.println("<b style='color: firebrick'>" + msgg +  "</b>");%>
 
+
+	
 	<div class = "table-responsive">
 	<div class = "mbd">
-	<div class = "container border">
-	<br>
-	<%
+		<div class = "container border">
+			<br>
+			<%
 	int Total = 0;
-	String ct = N;
+	String ct = null;
 	DAO2 dao = new DAO2(DBConnect.getConn());
-	List<cart> listv = dao.getcart(ct);
+	List<cart> listv = dao.getSelectedcart();
 	for(cart v : listv)
 	{%>
-			
-			
 			<div class = "container bd">
 			
 			<div class = "row justify-content-center align-items-center">
@@ -105,8 +124,7 @@ if (cookies[i].getName().equals("cart"))
 			
 				
 			<div class = "col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">		
-				<a href='removecart?ie=<%=v.getPimage()%>&id=<%=N%>'><img src = "images/delete.jpg" alt="Remove" height= 25px></a>
-
+				<a href='removecartnull?ie=<%=v.getPimage()%>'><img src = "images/delete.jpg" alt="Remove" height= 25px></a>
 				</div>
 				
 			<% Total = Total + v.getPprice()* v.getPquantity() ; %>
@@ -115,32 +133,39 @@ if (cookies[i].getName().equals("cart"))
 		</div>
 		<br>
 		<%} %>
-
+			
 		<div class = "tp"><h5><b>Total Price: RM <%=Total %></b> </h5></div>
-		<br>
+		<br>	
 		<%if(Total != 0)
 			{%>
-		<a href="ShippingAddress.jsp?Total=<%= Total %>"><button class = "pd"><h5 class = "ws"><b> Proceed To Checkout</b></h5></button></a>
+		<button><a href="customerhome.jsp">Continue shopping</a></button>
+		<button><a href="ShippingAddress.jsp?Total=<%= Total %> + &CusName=<%= CusName%> +">Proceed to checkout</a></button>
+		<!-- <a href='ShippingAddress.jsp?Total=<%= Total %> + &CusName=<%= CusName%> +' ><button class = "pd"><h5 class = "ws"><b>Proceed To Checkout</b></h5></button></a> -->
 		<%}
 		else if(Total == 0)
 		{%>
-		<button onclick = "show()" class = "pd"><h5 class = "ws"><b> Proceed To Checkout</b></h5></button>
+			<button class="checkout-btn" onclick = "show()" class = "pd"><h5 class="ws"><b>Proceed To Checkout</b></h5></button>
+			
+			
 		<%}%>
+		
+
 	
-
-
-<% if(Total == 0)
+	<% if(Total == 0)
 	{%>
 	<center>
 	<img src = "images/emptycart.png" height=200px>
 	<h2 style="color:firebrick">YOUR CART IS EMPTY</h2>
 	</center>
 	<%} %>
-	
+
+
+
+
 	</div>
 </div>
 </div>
-	
+
 </center>
 
 

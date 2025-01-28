@@ -10,13 +10,13 @@
 	
 <b>	<a href="cartnull.jsp" class="w3-bar-item w3-button" ><img src = images/cart.png height=40px alt=Cart></a>
 
-	<b style="position: relative;
+	<!-- <b style="position: relative;
   top: 16px;
   right: 37px;"><span style="height: 25px;
   width: 25px;
   background-color: red;
   border-radius: 50%;
-  display: inline-block"><b style="color:white"><center><%=tqty %></center></b></span></b>
+  display: inline-block"><b style="color:white"><center><%=tqty %></center></b></span></b> -->
 	</b>
 	
 	<a href="customer_reg.jsp" class="w3-bar-item w3-button"><b>Customer Registration</b></a>
