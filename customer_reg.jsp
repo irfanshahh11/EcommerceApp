@@ -34,6 +34,21 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	margin-right: 185px;
 	
 	}
+
+    .reg-btn {
+        border-radius: 15px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #efefef;
+        border: none;
+        padding: 10px 0;
+    }
+
+    .reg-btn:hover {
+        background-color: #007bff;
+        transition: 0.3s ease;
+    }
 </style>
 </head>
 
@@ -100,7 +115,8 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
             <h2><input type ="number"  name ="Contact_No" class = "c" required></h2>
             <br>
             
-            <h3><b><input type ="submit" name="b1" value ="Register"></b></h3>
+            <h3><b><input class="reg-btn" type ="submit" name="b1" value="Register"></b></h3>
+            <!-- <button type="submit" name="b1" class="reg-btn">Register</button> -->
           
             
             

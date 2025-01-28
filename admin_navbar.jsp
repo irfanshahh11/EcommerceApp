@@ -5,11 +5,11 @@
 	<div style='margin:auto;
 	display: flex;
 	justify-content: space-around;
-	align-items: center; '>
+	align-items: center;'>
 	
 	<b style='color: firebrick'>Welcome <%= A%> </b> 
 	
-<b>	<a href="cartnulla.jsp" class="w3-bar-item w3-button" ><img src = images/cart.png height=40px alt=Cart></a>
+<!-- <b>	<a href="cartnulla.jsp" class="w3-bar-item w3-button" ><img src = images/cart.png height=40px alt=Cart></a>
 
 	<b style="position: relative;
   top: 16px;
@@ -18,7 +18,7 @@
   background-color: red;
   border-radius: 50%;
   display: inline-block"><b style="color:white"><center><%=tqty %></center></b></span></b>
-	</b>	
+	</b> -->
 	
 	<a href="addproduct.jsp" class="w3-bar-item w3-button"  ><b>Add Product</b></a>
 	
@@ -51,4 +51,18 @@
 	</div>
 	<hr>
 
-	
+	<style>
+
+		h1, h2, h3, h4, h5, h6, b {
+			margin: 20px 0 20px 0;
+		}
+
+		.w3-bar-item, .w3-button {
+			border-radius: 15px;
+		}
+
+		.w3-button:hover {
+			background-color: #fc9900;
+		}
+
+	</style>

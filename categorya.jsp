@@ -15,6 +15,10 @@
   .category-container {
     background-color: #f9f9f9;
     padding: 20px 0;
+    height: auto;
+    margin-bottom: 100vh;
+    margin-top: 20px;
+    border-radius: 10px;
   }
   .category-card {
     background-color: #ffffff;

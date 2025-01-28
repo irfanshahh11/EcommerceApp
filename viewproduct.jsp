@@ -44,20 +44,23 @@ h1 {
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 .product-card:hover {
     transform: translateY(-5px);
 }
 .product-card img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .product-card a {
     text-decoration: none;
     font-weight: bold;
     color: #007bff;
+    margin-top: auto;
 }
 .product-card a:hover {
     color: #0056b3;

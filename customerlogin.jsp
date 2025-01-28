@@ -30,6 +30,22 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
 	margin-right: 110px;
 	
 	}
+
+    .login-btn {
+        border-radius: 15px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #efefef;
+        border: none;
+        padding: 10px 0;
+    }
+
+    .login-btn:hover {
+        background-color: #007bff;
+        transition: 0.3s ease;
+    }
+
 </style>
 </head>
 <body>
@@ -129,14 +145,15 @@ String fail = null;
            <h2><input type ="password" id = "x2" name ="Password" class = "c" required></h2>
             
             <br>
-            <h3><b><input type ="submit" name="b1" value ="Login"></b></h3>
+            <h3><b><input class="login-btn" type ="submit" name="b1" value ="Login"></b></h3>
             
 		
         </center>
+        <p style="display: inline; white-space: nowrap;">Don't have an account with us yet?<a style="color: #007bff;" href="customer_reg.jsp?Total=<%=Total4 %>&CusName=<%=CusName4 %>"> Register here</a>.</p>
+        <br>
+        <br>
         
-        <br>
-        <br>
-        <a href = 'customer_reg.jsp?Total=<%=Total4 %>&CusName=<%=CusName4 %>' class ="d w3-bar-item w3-button" ><h4><b>Customer Registration</b></h4></a>
+        <!-- <a href = 'customer_reg.jsp?Total=<%=Total4 %>&CusName=<%=CusName4 %>' class ="d w3-bar-item w3-button" ><h4><b>Customer Registration</b></h4></a> -->
         
             
             

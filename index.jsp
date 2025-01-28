@@ -28,12 +28,12 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
         text-decoration: none;
         background-color: #ebe9eb;
         padding: 14px 25px;
-       font-size: larger;
+        font-size: larger;
       
         }
-	 
+
         div.scrollmenu {
-          background-color: black;
+          /* background-color: black; */
           overflow: auto;
           white-space: nowrap;
         }
@@ -178,7 +178,7 @@ function showSlides() {
 <hr>
 
 	<br>
-	<center><h3><c>Featured Products</c></h3></center>
+	<center><h3><c style="border-radius: 15px;">Featured Products</c></h3></center>
 	<br>
 <div class = "scrollmenu" style="max-width: 1200px">
 
@@ -188,7 +188,7 @@ function showSlides() {
 	for(viewlist v : listv)
 		{%>
 		<b>
-		<div class = "container border" style="background-color: white">
+		<div class = "container border" style="background-color: white; border-radius: 15px;">
 		<center>
 			<table>
 				<tr><th>

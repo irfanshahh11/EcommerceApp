@@ -26,13 +26,22 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 .product-card {
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 15px;
     background-color: #fff;
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
 }
+
+.product-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
 .product-card img {
     max-width: 100%;
     height: auto;
@@ -40,9 +49,11 @@ body, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
 }
 .product-card h5 {
-    font-size: 16px;
+    font-size: 22px;
+    font-weight: bold;
     color: #333;
     margin-bottom: 8px;
+    margin-top: auto;
 }
 .product-card a {
     text-decoration: none;

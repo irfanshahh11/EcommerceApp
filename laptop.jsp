@@ -24,6 +24,7 @@ body, h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100vh;
 }
 h1 {
     text-align: center;
@@ -43,6 +44,8 @@ h1 {
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 .product-card:hover {
     transform: translateY(-5px);
@@ -57,6 +60,7 @@ h1 {
     text-decoration: none;
     font-weight: bold;
     color: #007bff;
+    margin-top: auto;
 }
 .product-card a:hover {
     color: #0056b3;

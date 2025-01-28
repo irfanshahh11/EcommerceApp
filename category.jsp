@@ -10,14 +10,22 @@
 <style>
 body, h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
-    margin: 0;
     padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0 20px 0;
+}
+
 .container {
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: auto;
+    margin-bottom: 100vh;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 .category-card {
     text-align: center;
@@ -33,10 +41,12 @@ body, h1, h2, h3, h4, h5, h6 {
     transform: scale(1.05);
 }
 .category-card img {
-    width: 120px; /* Ensures all images are the same size */
-    height: 120px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 .category-card a {
     text-decoration: none;

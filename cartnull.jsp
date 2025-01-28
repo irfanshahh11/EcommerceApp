@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Cart</title>
 
  <script>
 
@@ -25,8 +25,15 @@
 <link rel="stylesheet" href="Css/whitespace.css">
 
 <style>
-.w3-sidebar a {font-family: "Roboto", sans-serif}
-body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+.w3-sidebar a {
+	font-family: "Roboto", sans-serif
+}
+
+body,h1,h2,h3,h4,h5,h6,.w3-wide {
+	font-family: "Montserrat", sans-serif;
+}
+
 </style>
 </head>
 <body>
@@ -106,7 +113,7 @@ if (cookies[i].getName().equals("cart"))
 			</div>
 
 				<div class = "col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
-				<b>₹ <%=v.getPprice() %></b>
+				<b>RM <%=v.getPprice() %></b>
 				</div>
 				
 				
@@ -131,7 +138,7 @@ if (cookies[i].getName().equals("cart"))
 		<%}
 		else if(Total == 0)
 		{%>
-			<button onclick = "show()" class = "pd"><h5 class="ws"><b>Proceed To Checkout</b></h5></button>
+			<button class="checkout-btn" onclick = "show()" class = "pd"><h5 class="ws"><b>Proceed To Checkout</b></h5></button>
 			
 			
 		<%}%>

@@ -20,7 +20,11 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+            height: auto;
+            margin-bottom: 100vh;
+            margin-top: 20px;
+            border-radius: 10px;
+                }
 
         h1 {
             text-align: center;
