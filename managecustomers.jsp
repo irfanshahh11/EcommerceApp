@@ -119,7 +119,7 @@ footer a:hover {
                         <td><%= c.getEmail_Id() %></td>
                         <td>+60<%= c.getContact_No() %></td>
                         <td>
-                            <a href="carta.jsp?custname=<%= c.getName() %>">View Cart</a> |
+                            <!-- <a href="carta.jsp?custname=<%= c.getName() %>">View Cart</a> | -->
                             <a href="deletecustomer?Name=<%= c.getName() %>&Email_Id=<%= c.getEmail_Id() %>">
                                 <img src="images/delete.jpg" alt="Remove" height="25px">
                             </a>
